@@ -130,7 +130,7 @@ public class Control implements Serializable {
     /**
      * @return the tablero
      */
-     public String jugar() {
+    public String jugar() {
         int resultadoDado1 = dado1.lanzar();
         int resultadoDado2 = dado2.lanzar();
         Jugador jugadorActual = (Jugador)(tablero.getJugadores().get(turnoJugador));
@@ -146,43 +146,94 @@ public class Control implements Serializable {
         boolean esTiradaDoble = false;
         if (resultadoDado1 == resultadoDado2) {
             esTiradaDoble = true;
-            
         }
-        
-     if (tipoCasillaAntesDeTirar == 6) {//jugador en la carcel
-          
+       
+        if (tipoCasillaAntesDeTirar == 6) {//jugador en la carcel
+            if (esTiradaDoble) {//jugador sale de la carcel y tira el otra vez
+                jugadorActual.setPosicion(posicionDespuesDeTirar);
+            }
+            else {//comprobar si es su 4 tirada desde la carcel o si tiene tarjeta salir de la carcel y le toca a el
+                if(jugadorActual.getTarjetaSalirCarcel() > 0) {
+                    jugadorActual.setPosicion(posicionDespuesDeTirar);
+                    jugadorActual.setTarjetaSalirCarcel(jugadorActual.getTarjetaSalirCarcel() - 1);            
+                }
+                else {
+                    if(jugadorActual.getTiradasEnCarcel() > 3) {
+                        jugadorActual.setTiradasEnCarcel(0);
+                        jugadorActual.setPosicion(posicionDespuesDeTirar);
+                    }
+                    else {
+                        jugadorActual.setTiradasEnCarcel(jugadorActual.getTiradasEnCarcel() + 1);
+                        pasarTurno();
+                    }
+                }
             }
         }
         else {
             if (tipoCasillaDespuesDeTirar == 0) {//jugador en la salida
-              
+                jugadorActual.setDinero(jugadorActual.getDinero() + 200);
+                pasarTurno();
             }
-            
+            int propietario = getPropietarioDeCasilla(casillaDespuesDeTirar.getId());
             if (tipoCasillaDespuesDeTirar == 1) {//calle               
-                
+                if (propietario == -1) {//se puede comprar
+                   
+                }
+                else {
+                    if (propietario == jugadorActual.getId()) {// es del jugador que tiene Turno: Se puede Edificar
+                       
+                    }
+                    else {//Pertenece a Otro, a Pagar
+                       
+                    }
+                }
+                jugadorActual.setPosicion(posicionDespuesDeTirar);
             }
             if (tipoCasillaDespuesDeTirar == 2) {//empresa
-             
+                if (propietario == -1) {//se puede comprar
+                   
+                }
+                else {
+                    if (propietario == jugadorActual.getId()) {// es del jugador que tiene Turno: Se puede Edificar
+                       
+                    }
+                    else {//Pertenece a Otro, a Pagar
+                       
+                    }
+                }
+                jugadorActual.setPosicion(posicionDespuesDeTirar);
             }
             if (tipoCasillaDespuesDeTirar == 3) {//estacion
-               
+                if (propietario == -1) {//se puede comprar
+                   
+                }
+                else {
+                    if (propietario == jugadorActual.getId()) {// es del jugador que tiene Turno: Se puede Edificar
+                       
+                    }
+                    else {//Pertenece a Otro, a Pagar
+                    }
+                }
             }           
             if (tipoCasillaDespuesDeTirar == 4) {//caja comunidad o suerte
                
             }
             if (tipoCasillaDespuesDeTirar == 5) {//ir a la carcel
-             
+                jugadorActual.setTiradasEnCarcel(0);
+                jugadorActual.setPosicion(10);
             }           
             if (tipoCasillaDespuesDeTirar == 6) {//la carcel
-               
+                jugadorActual.setTiradasEnCarcel(0);
+                jugadorActual.setPosicion(posicionDespuesDeTirar);
             }                       
             if (tipoCasillaDespuesDeTirar == 7) {//impuesto
                 //Pagar
-             
+                jugadorActual.setDinero(jugadorActual.getDinero() - casillaDespuesDeTirar.getPrecioCompra());
+                jugadorActual.setPosicion(posicionDespuesDeTirar);
             }
             if (tipoCasillaDespuesDeTirar == 8) {//parking
                 //No pasa nada
-            
+                jugadorActual.setPosicion(posicionDespuesDeTirar);
             }           
         }       
         return "";
