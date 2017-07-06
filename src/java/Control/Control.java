@@ -149,8 +149,150 @@ public class Control implements Serializable {
             
         }
         
+     if (tipoCasillaAntesDeTirar == 6) {//jugador en la carcel
+          
+            }
+        }
+        else {
+            if (tipoCasillaDespuesDeTirar == 0) {//jugador en la salida
+              
+            }
+            
+            if (tipoCasillaDespuesDeTirar == 1) {//calle               
+                
+            }
+            if (tipoCasillaDespuesDeTirar == 2) {//empresa
+             
+            }
+            if (tipoCasillaDespuesDeTirar == 3) {//estacion
+               
+            }           
+            if (tipoCasillaDespuesDeTirar == 4) {//caja comunidad o suerte
+               
+            }
+            if (tipoCasillaDespuesDeTirar == 5) {//ir a la carcel
+             
+            }           
+            if (tipoCasillaDespuesDeTirar == 6) {//la carcel
+               
+            }                       
+            if (tipoCasillaDespuesDeTirar == 7) {//impuesto
+                //Pagar
+             
+            }
+            if (tipoCasillaDespuesDeTirar == 8) {//parking
+                //No pasa nada
+            
+            }           
+        }       
         return "";
-     }
+    }
+   
+    public void pasarTurno() {
+        int turnoTemporal = this.turnoJugador + 1;
+        if (turnoTemporal > tablero.getJugadores().size()) {
+            turnoTemporal = 0;
+        }
+        setTurnoJugador(turnoTemporal);
+    }
+   
+    private int getPropietarioDeCasilla(int idCasilla) {
+        int propietario = -1;
+        ArrayList jugadores = tablero.getJugadores();
+        for (int i = 0; i < jugadores.size(); i++) {
+            Jugador jugador = (Jugador)(jugadores.get(i));
+            ArrayList propiedades = jugador.getPropiedades();
+            for (int j = 0; j < propiedades.size(); j++) {
+                if (idCasilla == (Integer)propiedades.get(j)) {
+                    propietario = jugador.getId();
+                    return propietario;
+                }
+            }
+        }
+        return propietario;
+    }
+         
+    public String comprarPropiedad() {
+        return "";
+    }
+
+    public String edificarPropiedad() {
+        return "";
+    }
+
+    private String pagarEnPropiedad(int idCasilla, int tipoCasilla, int idJugadorQuePaga, int idJugadorPropietario, int idGrupo, int totalGrupo) {
+        int posesionesPropietario = getPosesionesDeGrupo(idCasilla, idJugadorPropietario, idGrupo);
+        Jugador jugadorQuePaga = (Jugador)(tablero.getJugadores().get(idJugadorQuePaga)); 
+        Jugador jugadorPropietario = (Jugador)(tablero.getJugadores().get(idJugadorQuePaga)); 
+        Casilla casilla = (Casilla)(tablero.getCasillas().get(idCasilla));               
+
+       
+        int aPagar = 0;
+        if (tipoCasilla == 1) {//casilla: En funcion de que haya o no edificios
+            if (totalGrupo == posesionesPropietario) {//todo pertenece al que cobra
+                //comprobar que no hay nada edificado
+                if (getHayEdificacionesEnGrupo(idGrupo) > 0) {//se cobra lo que haya en la casilla
+                   
+                }
+                else {// se cobra el doble de lo que valga la
+                    aPagar = casilla.getPago() * 2;                   
+                }
+            }
+            else {
+                //se paga lo que ponga la casilla y no puede estar edificada
+                aPagar = casilla.getPago();
+               
+            }
+           
+        }
+        if (tipoCasilla == 2) {//empresa: En funcion del numero
+            int resultadoDado1 = dado1.lanzar();
+            int resultadoDado2 = dado2.lanzar();       
+        }
+        if (tipoCasilla == 3) {//estacion: En funcion del numero que se tenga
+       
+        } 
+        jugadorQuePaga.setDinero(jugadorQuePaga.getDinero() - aPagar);
+        jugadorPropietario.setDinero(jugadorPropietario.getDinero() + aPagar);       
+        return "";
+    }
+   
+    private int getPosesionesDeGrupo(int idCasilla, int idJugador, int idGrupo) {
+        Jugador jugador = (Jugador)(tablero.getJugadores().get(idJugador));
+        ArrayList casillas = tablero.getCasillas();
+        Casilla casilla = (Casilla)(casillas.get(idCasilla));       
+        int totalGrupo = 0;
+        int totalJugador = 0;
+        for (int i = 0; i < casillas.size(); i++) {
+            if (idGrupo == ((Casilla)(casillas.get(i))).getIdGrupo()) {
+                totalGrupo++;
+                if (idJugador == getPropietarioDeCasilla(((Casilla)(casillas.get(i))).getId())) {
+                    totalJugador++;
+                }
+            }
+        }
+        return totalJugador;
+    }
+   
+    private int getHayEdificacionesEnGrupo(int idGrupo) {
+        ArrayList casillas = tablero.getCasillas();
+        for (int i = 0; i < casillas.size(); i++) {
+            if (idGrupo == ((Casilla)(casillas.get(i))).getIdGrupo()) {               
+                if ( ((Casilla)(casillas.get(i))).getNumeroDeCasas() > 0) {
+                    return 1;
+                }
+            }
+        }
+        return 0;
+    }
+   
+   
+    private int getNunmeroDeGrupo(int idCasilla) {
+        return 0;
+    }
+
+   
+   
     public Tablero getTablero() {
         return tablero;
     }
