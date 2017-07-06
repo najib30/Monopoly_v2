@@ -3,14 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Monopoly/src/java/Contenedor/Jugador.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Monopoly/src/java/Contenedor/Tablero.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Monopoly/src/java/Servlet/Servlet.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Monopoly/web/index.jsp</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Monopoly/src/java/Contenedor/Dado.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Monopoly/src/java/Control/Control.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Monopoly/src/java/Contenedor/Casilla.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Monopoly/src/java/Contenedor/Tarjeta.java</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/src/java/Contenedor/Jugador.java</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/src/java/Contenedor/Tarjeta.java</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/web/WEB-INF/tarjetas_suerte.xml</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/src/java/Control/Control.java</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/src/java/Contenedor/Tablero.java</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/web/WEB-INF/beans.xml</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/src/java/Contenedor/Casilla.java</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/web/WEB-INF/casillas.xml</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/src/java/Servlet/Servlet.java</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/web/WEB-INF/tarjetas_esp.xml</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/web/index.jsp</file>
+            <file>file:/C:/Users/PCCASA/Desktop/Monopoly_Najib_Ibai_extra/Monopoly/src/java/Contenedor/Dado.java</file>
         </group>
     </open-files>
 </project-private>

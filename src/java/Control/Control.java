@@ -130,6 +130,27 @@ public class Control implements Serializable {
     /**
      * @return the tablero
      */
+     public String jugar() {
+        int resultadoDado1 = dado1.lanzar();
+        int resultadoDado2 = dado2.lanzar();
+        Jugador jugadorActual = (Jugador)(tablero.getJugadores().get(turnoJugador));
+        int posicionAntesDeTirar = jugadorActual.getPosicion();
+        int posicionDespuesDeTirar = posicionAntesDeTirar + resultadoDado1 + resultadoDado1;
+        if (posicionDespuesDeTirar > 39) {
+            posicionDespuesDeTirar = posicionDespuesDeTirar - 40;
+        }
+        Casilla casillaAntesDeTirar = (Casilla)(tablero.getCasillas().get(posicionAntesDeTirar));
+        Casilla casillaDespuesDeTirar = (Casilla)(tablero.getCasillas().get(posicionDespuesDeTirar));
+        int tipoCasillaAntesDeTirar = casillaAntesDeTirar.getTipo();
+        int tipoCasillaDespuesDeTirar = casillaDespuesDeTirar.getTipo();
+        boolean esTiradaDoble = false;
+        if (resultadoDado1 == resultadoDado2) {
+            esTiradaDoble = true;
+            
+        }
+        
+        return "";
+     }
     public Tablero getTablero() {
         return tablero;
     }
