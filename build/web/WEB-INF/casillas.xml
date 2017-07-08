@@ -3,11 +3,11 @@
 	<casilla>
 		<id>0</id>
 		<nombre>POR PASAR POR LA SALIDA COBRAS 200€</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>0</tipo> 
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -21,11 +21,11 @@
 	<casilla>
 		<id>1</id>
 		<nombre>CALLE DE PLENTZIA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>60</precio_compra>
 		<color>803399</color>
-		<grupo>1</grupo>
-		<id_grupo>2</id_grupo>
+		<id_grupo>1</id_grupo>
+		<grupo>2</grupo>
 		<tipo>1</tipo>
 		<pago>2</pago>
 		<pago_1_casa>10</pago_1_casa>
@@ -39,11 +39,11 @@
 	<casilla>
 		<id>2</id>
 		<nombre>CAJA DE COMUNIDAD</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>4</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -57,11 +57,11 @@
 	<casilla>
 		<id>3</id>
 		<nombre>CALLE DE BARRIKA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>60</precio_compra>
 		<color>803399</color>
-		<grupo>1</grupo>
-		<id_grupo>2</id_grupo>
+		<id_grupo>1</id_grupo>
+		<grupo>2</grupo>
 		<tipo>1</tipo>
 		<pago>4</pago>
 		<pago_1_casa>20</pago_1_casa>
@@ -75,11 +75,11 @@
 	<casilla>
 		<id>4</id>
 		<nombre>IMPUESTO SOBRE CAPITAL</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>200</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>7</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -93,11 +93,11 @@
 	<casilla>
 		<id>5</id>
 		<nombre>ESTACIÓN FERROCARIL BILBAO</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>200</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>100</grupo>
-		<id_grupo>4</id_grupo>
+		<id_grupo>100</id_grupo>
+		<grupo>4</grupo>
 		<tipo>2</tipo>
 		<pago>25</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -111,11 +111,11 @@
 	<casilla>
 		<id>6</id>
 		<nombre>CALLE DE PORTUGALETE</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>100</precio_compra>
 		<color>80CCFF</color>
-		<grupo>2</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>2</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo> 
 		<pago>6</pago>
 		<pago_1_casa>30</pago_1_casa>
@@ -129,11 +129,11 @@
 	<casilla>
 		<id>7</id>
 		<nombre>Suerte</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>4</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -147,11 +147,11 @@
 	<casilla>
 		<id>8</id>
 		<nombre>CALLE DE SANTURTZI</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>100</precio_compra>
 		<color>80CCFF</color>
-		<grupo>2</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>2</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo> 
 		<pago>6</pago>
 		<pago_1_casa>30</pago_1_casa>
@@ -165,11 +165,11 @@
 	<casilla>
 		<id>9</id>
 		<nombre>CALLE LARRASKITU</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>120</precio_compra>
 		<color>80CCFF</color>
-		<grupo>2</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>2</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>8</pago>
 		<pago_1_casa>40</pago_1_casa>
@@ -183,11 +183,11 @@
 	<casilla>
 		<id>10</id>
 		<nombre>CÁRCEL</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>6</tipo> 
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -201,11 +201,11 @@
 	<casilla>
 		<id>11</id>
 		<nombre>CALLE DE AMETZOLA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>140</precio_compra>
 		<color>CC44CC</color>
-		<grupo>3</grupo>
 		<id_grupo>3</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>10</pago>
 		<pago_1_casa>50</pago_1_casa>
@@ -219,11 +219,11 @@
 	<casilla>
 		<id>12</id>
 		<nombre>COMPAÑÍA ELECTRICA IBERDROLA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>150</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>200</grupo>
-		<id_grupo>2</id_grupo>
+		<id_grupo>200</id_grupo>
+		<grupo>2</grupo>
 		<tipo>3</tipo> 
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -237,11 +237,11 @@
 	<casilla>
 		<id>13</id>
 		<nombre>CALLE DE TXURDINAGA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>140</precio_compra>
 		<color>CC44CC</color>
-		<grupo>3</grupo>
 		<id_grupo>3</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo> 
 		<pago>10</pago>
 		<pago_1_casa>50</pago_1_casa>
@@ -255,11 +255,11 @@
 	<casilla>
 		<id>14</id>
 		<nombre>AVENIDA DE BASAURI</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>160</precio_compra>
 		<color>CC44CC</color>
-		<grupo>3</grupo>
 		<id_grupo>3</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo> 
 		<pago>12</pago>
 		<pago_1_casa>60</pago_1_casa>
@@ -273,11 +273,11 @@
 	<casilla>
 		<id>15</id>
 		<nombre>AEROPUERTO DE LOIU</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>200</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>100</grupo>
-		<id_grupo>4</id_grupo>
+		<id_grupo>100</id_grupo>
+		<grupo>4</grupo>
 		<tipo>2</tipo>
 		<pago>25</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -291,11 +291,11 @@
 	<casilla>
 		<id>16</id>
 		<nombre>PASEO DE GORLIZ</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>180</precio_compra>
 		<color>FF8000</color>
-		<grupo>4</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>4</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>14</pago>
 		<pago_1_casa>70</pago_1_casa>
@@ -309,11 +309,11 @@
 	<casilla>
 		<id>17</id>
 		<nombre>CAJA DE COMUNIDAD</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>4</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -327,11 +327,11 @@
 	<casilla>
 		<id>18</id>
 		<nombre>CALLE DE ATXABIRIBIL</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>180</precio_compra>
 		<color>FF8000</color>
-		<grupo>4</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>4</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>14</pago>
 		<pago_1_casa>70</pago_1_casa>
@@ -345,11 +345,11 @@
 	<casilla>
 		<id>19</id>
 		<nombre>CALLE DE LA ARENA</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>200</precio_compra>
 		<color>FF8000</color>
-		<grupo>4</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>4</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>16</pago>
 		<pago_1_casa>80</pago_1_casa>
@@ -363,11 +363,11 @@
 	<casilla>
 		<id>20</id>
 		<nombre>PARKING GRATIS</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>8</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -381,11 +381,11 @@
 	<casilla>
 		<id>21</id>
 		<nombre>PLAYA DE MUSKIZ</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>220</precio_compra>
 		<color>FF0000</color>
-		<grupo>5</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>5</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>18</pago>
 		<pago_1_casa>90</pago_1_casa>
@@ -399,11 +399,11 @@
 	<casilla>
 		<id>22</id>
 		<nombre>SUERTE</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>4</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -417,11 +417,11 @@
 	<casilla>
 		<id>23</id>
 		<nombre>CALLE DE GATIKA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>220</precio_compra>
 		<color>FF0000</color>
-		<grupo>5</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>5</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>18</pago>
 		<pago_1_casa>90</pago_1_casa>
@@ -435,11 +435,11 @@
 	<casilla>
 		<id>24</id>
 		<nombre>BASILICA DE BEGOÑA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>240</precio_compra>
 		<color>FF0000</color>
-		<grupo>5</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>5</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>20</pago>
 		<pago_1_casa>100</pago_1_casa>
@@ -453,11 +453,11 @@
 	<casilla>
 		<id>25</id>
 		<nombre>ESTACIÓN DE VITORIA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>200</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>100</grupo>
-		<id_grupo>4</id_grupo>
+		<id_grupo>100</id_grupo>
+		<grupo>4</grupo>
 		<tipo>2</tipo>
 		<pago>25</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -471,11 +471,11 @@
 	<casilla>
 		<id>26</id>
 		<nombre>EL ARENAL</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>260</precio_compra>
 		<color>FFFF00</color>
-		<grupo>6</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>6</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>22</pago>
 		<pago_1_casa>110</pago_1_casa>
@@ -489,11 +489,11 @@
 	<casilla>
 		<id>27</id>
 		<nombre>VIA GERNIKA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>260</precio_compra>
 		<color>FFFF00</color>
-		<grupo>6</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>6</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>22</pago>
 		<pago_1_casa>110</pago_1_casa>
@@ -507,11 +507,11 @@
 	<casilla>
 		<id>28</id>
 		<nombre>COMPAÑÍA AGUAS IBERDUERO</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>150</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>200</grupo>
-		<id_grupo>2</id_grupo>
+		<id_grupo>200</id_grupo>
+		<grupo>2</grupo>
 		<tipo>3</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -525,11 +525,11 @@
 	<casilla>
 		<id>29</id>
 		<nombre>PUENTE COLGANTE</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>280</precio_compra>
 		<color>FFFF00</color>
-		<grupo>6</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>6</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>24</pago>
 		<pago_1_casa>120</pago_1_casa>
@@ -543,11 +543,11 @@
 	<casilla>
 		<id>30</id>
 		<nombre>VAYA A LA CÁRCEL</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>5</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -561,11 +561,11 @@
 	<casilla>
 		<id>31</id>
 		<nombre>SAN JUAN DE GAZTELUGATXE</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>300</precio_compra>
 		<color>338033</color>
-		<grupo>7</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>7</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>26</pago>
 		<pago_1_casa>130</pago_1_casa>
@@ -579,11 +579,11 @@
 	<casilla>
 		<id>32</id>
 		<nombre>CUEVA ZUGARRAMURDI</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>300</precio_compra>
 		<color>338033</color>
-		<grupo>7</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>7</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>26</pago>
 		<pago_1_casa>130</pago_1_casa>
@@ -597,11 +597,11 @@
 	<casilla>
 		<id>33</id>
 		<nombre>CAJA DE COMUNIDAD</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>4</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -615,11 +615,11 @@
 	<casilla>
 		<id>34</id>
 		<nombre>BOSQUE DE OMA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>320</precio_compra>
 		<color>338033</color>
-		<grupo>7</grupo>
-		<id_grupo>3</id_grupo>
+		<id_grupo>7</id_grupo>
+		<grupo>3</grupo>
 		<tipo>1</tipo>
 		<pago>28</pago>
 		<pago_1_casa>150</pago_1_casa>
@@ -633,11 +633,11 @@
 	<casilla>
 		<id>35</id>
 		<nombre>ESTACIÓN DE GIPUZKOA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>200</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>100</grupo>
-		<id_grupo>4</id_grupo>
+		<id_grupo>100</id_grupo>
+		<grupo>4</grupo>
 		<tipo>2</tipo>
 		<pago>25</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -651,11 +651,11 @@
 	<casilla>
 		<id>36</id>
 		<nombre>SUERTE</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>4</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -669,11 +669,11 @@
 	<casilla>
 		<id>37</id>
 		<nombre>CALLE DE BALMASEDA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>350</precio_compra>
 		<color>2020CC</color>
-		<grupo>8</grupo>
-		<id_grupo>2</id_grupo>
+		<id_grupo>8</id_grupo>
+		<grupo>2</grupo>
 		<tipo>1</tipo>
 		<pago>35</pago>
 		<pago_1_casa>175</pago_1_casa>
@@ -687,11 +687,11 @@
 	<casilla>
 		<id>38</id>
 		<nombre>TASA DE BILBAINO</nombre>
-		<se_puede_comprar>0</se_puede_comprar>
+		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>100</precio_compra>
 		<color>FFFFFF</color>
-		<grupo>0</grupo>
 		<id_grupo>0</id_grupo>
+		<grupo>0</grupo>
 		<tipo>7</tipo>
 		<pago>0</pago>
 		<pago_1_casa>0</pago_1_casa>
@@ -705,11 +705,11 @@
 	<casilla>
 		<id>39</id>
 		<nombre>ZALLA BIDEA</nombre>
-		<se_puede_comprar>1</se_puede_comprar>
+		<se_puede_precio_compra>1</se_puede_precio_compra>
 		<precio_compra>400</precio_compra>
 		<color>2020CC</color>
-		<grupo>8</grupo>
-		<id_grupo>2</id_grupo>
+		<id_grupo>8</id_grupo>
+		<grupo>2</grupo>
 		<tipo>1</tipo>
 		<pago>50</pago>
 		<pago_1_casa>200</pago_1_casa>

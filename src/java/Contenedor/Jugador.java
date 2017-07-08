@@ -20,16 +20,18 @@ public class Jugador implements Serializable {
     private ArrayList propiedades;
     private boolean carcel;
     private int tiradasEnCarcel;
+    private int tiradasDoble;
     private int tarjetaSalirCarcel;
 
     public Jugador(int id, String nombre) {
        this.id = id;
        this.nombre = nombre;
        this.posicion = 0;
-       this.dinero = 0;
+       this.dinero = 1500;
        this.propiedades = new ArrayList();
        this.carcel = false;
        this.tiradasEnCarcel = 0;
+       this.tiradasDoble = 0;
        this.tarjetaSalirCarcel = 0;
     }
 
@@ -143,5 +145,19 @@ public class Jugador implements Serializable {
      */
     public void setTarjetaSalirCarcel(int tarjetaSalirCarcel) {
         this.tarjetaSalirCarcel = tarjetaSalirCarcel;
+    }
+
+    /**
+     * @return the tiradasDoble
+     */
+    public int getTiradasDoble() {
+        return tiradasDoble;
+    }
+
+    /**
+     * @param tiradasDoble the tiradasDoble to set
+     */
+    public void setTiradasDoble(int tiradasDoble) {
+        this.tiradasDoble = tiradasDoble;
     }
 }
