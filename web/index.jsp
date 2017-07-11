@@ -245,7 +245,7 @@
             <div class="push"></div>
         </div>
         <div class="footer">
-             <p>Proyectos Informáticos 2 UOLS - Monopoly Najib e Ibai</p>
+             <p>Proyectos InformÃ¡ticos 2 UOLS - Monopoly Najib e Ibai</p>
         </div>        
     </body>
 </html>

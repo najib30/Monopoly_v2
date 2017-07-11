@@ -15,14 +15,14 @@ import java.util.ArrayList;
 public class Tablero implements Serializable {
     private ArrayList casillas;
     private ArrayList jugadores;
-    private ArrayList tarjetasSuerte;
-    private ArrayList tarjetasComunidad;    
+    private ArrayList tarjetasS;
+    private ArrayList tarjetasC;
 
-    public Tablero(ArrayList casillas, ArrayList jugadores, ArrayList tarjetasSuerte, ArrayList tarjetasComunidad) {
+    public Tablero(ArrayList casillas, ArrayList jugadores, ArrayList tarjetasS, ArrayList tarjetasC) {
         this.casillas = casillas;
         this.jugadores = jugadores;
-        this.tarjetasSuerte = tarjetasSuerte;
-        this.tarjetasComunidad = tarjetasComunidad;
+        this.tarjetasS = tarjetasS;        
+        this.tarjetasC = tarjetasC;        
     }    
     
     /**
@@ -54,31 +54,31 @@ public class Tablero implements Serializable {
     }
 
     /**
-     * @return the tarjetasSuerte
+     * @return the tarjetasS
      */
-    public ArrayList getTarjetasSuerte() {
-        return tarjetasSuerte;
+    public ArrayList getTarjetasS() {
+        return tarjetasS;
     }
 
     /**
-     * @param tarjetasSuerte the tarjetasSuerte to set
+     * @param tarjetasS the tarjetasS to set
      */
-    public void setTarjetasSuerte(ArrayList tarjetasSuerte) {
-        this.tarjetasSuerte = tarjetasSuerte;
+    public void setTarjetasS(ArrayList tarjetasS) {
+        this.tarjetasS = tarjetasS;
     }
 
     /**
-     * @return the tarjetasComunidad
+     * @return the tarjetasC
      */
-    public ArrayList getTarjetasComunidad() {
-        return tarjetasComunidad;
+    public ArrayList getTarjetasC() {
+        return tarjetasC;
     }
 
     /**
-     * @param tarjetasComunidad the tarjetasComunidad to set
+     * @param tarjetasC the tarjetasC to set
      */
-    public void setTarjetasComunidad(ArrayList tarjetasComunidad) {
-        this.tarjetasComunidad = tarjetasComunidad;
+    public void setTarjetasC(ArrayList tarjetasC) {
+        this.tarjetasC = tarjetasC;
     }
 
 }

@@ -2,7 +2,7 @@
 <casillas>
 	<casilla>
 		<id>0</id>
-		<nombre>POR PASAR POR LA SALIDA COBRAS 200€</nombre>
+		<nombre>POR PASAR POR LA SALIDA COBRAS 200euros</nombre>
 		<se_puede_precio_compra>0</se_puede_precio_compra>
 		<precio_compra>0</precio_compra>
 		<color>FFFFFF</color>

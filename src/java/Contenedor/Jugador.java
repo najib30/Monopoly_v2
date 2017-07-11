@@ -22,6 +22,7 @@ public class Jugador implements Serializable {
     private int tiradasEnCarcel;
     private int tiradasDoble;
     private int tarjetaSalirCarcel;
+    private boolean activo;
 
     public Jugador(int id, String nombre) {
        this.id = id;
@@ -33,6 +34,7 @@ public class Jugador implements Serializable {
        this.tiradasEnCarcel = 0;
        this.tiradasDoble = 0;
        this.tarjetaSalirCarcel = 0;
+       this.activo = true;
     }
 
     /**
@@ -159,5 +161,19 @@ public class Jugador implements Serializable {
      */
     public void setTiradasDoble(int tiradasDoble) {
         this.tiradasDoble = tiradasDoble;
+    }
+
+    /**
+     * @return the activo
+     */
+    public boolean isActivo() {
+        return activo;
+    }
+
+    /**
+     * @param activo the activo to set
+     */
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
 }
