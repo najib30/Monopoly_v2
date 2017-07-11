@@ -9,9 +9,15 @@ import Contenedor.Casilla;
 import Contenedor.Jugador;
 import Contenedor.Tablero;
 import Control.Control;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,11 +35,6 @@ public class Servlet extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
      */
     
     Control control;
@@ -88,13 +89,14 @@ public class Servlet extends HttpServlet {
         System.out.println("doPost: Comando " + comando);
         if (comando.compareToIgnoreCase("iniciar") == 0) {
             iniciar(request, response);
-            out.println(respuesta(debug(control)));
+            out.println(respuesta(debug(this.control)));
         }
         if (comando.compareToIgnoreCase("cargar") == 0) {
-            
+            cargar(request);
+            out.println(respuesta(debug(this.control)));
         }
-        if (comando.compareToIgnoreCase("guardar") == 0) {
-            
+        if (comando.compareToIgnoreCase("guardar") == 0) {            
+            out.println(htmlConsola(guardar(request)));            
         }                                    
         if (comando.compareToIgnoreCase("lanzar") == 0) {
             out.println(htmlConsola(lanzarDados(request)));
@@ -103,19 +105,19 @@ public class Servlet extends HttpServlet {
             out.println(htmlConsola(comprar(request)));
         }                                    
         if (comando.compareToIgnoreCase("edificarCasa1") == 0) {
-            
+            out.println(htmlConsola(edificar(1, 0, request)));            
         }                                    
         if (comando.compareToIgnoreCase("edificarCasa2") == 0) {
-            
+            out.println(htmlConsola(edificar(2, 0, request)));
         }                                    
         if (comando.compareToIgnoreCase("edificarCasa3") == 0) {
-            
+            out.println(htmlConsola(edificar(3, 0, request)));
         }                                    
         if (comando.compareToIgnoreCase("edificarCasa4") == 0) {
-            
+            out.println(htmlConsola(edificar(4, 0, request)));
         }                                    
         if (comando.compareToIgnoreCase("edificarHotel") == 0) {
-            
+            out.println(htmlConsola(edificar(0, 1, request)));
         }
         if (comando.compareToIgnoreCase("resumen") == 0) {
             HttpSession session = request.getSession();
@@ -177,14 +179,14 @@ public class Servlet extends HttpServlet {
         session.setAttribute("control", this.control);        
         return textoConsola;
     }
-    private String edificar(int numeroCasas) {
-        return "";
+    private String edificar(int numeroCasas, int numeroHotel, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        this.control = (Control)session.getAttribute("control");
+        String textoConsola = this.control.edificarPropiedad(numeroCasas, numeroHotel);
+        session.setAttribute("control", this.control);        
+        return textoConsola;
     }
-    private String edificarHotel() {
-        return "";
-    }
-    
-    
+        
     private String debug(Control control) {
         String htmlDepurar = "";       
         Tablero tablero = control.getTablero();
@@ -194,7 +196,7 @@ public class Servlet extends HttpServlet {
         for (int i = 0; i < jugadores.size(); i++) {
             htmlDepurar += "<p>";
             Jugador jugador = (Jugador)jugadores.get(i);            
-            htmlDepurar += jugador.getNombre() + "(Jugador:" + (jugador.getId() + 1) +  "), Dinero: " + jugador.getDinero() + ", Posicion (0-39)"  + jugador.getPosicion() + "</p>";
+            htmlDepurar += jugador.getNombre() + "(Jugador:" + (jugador.getId() + 1) +  "), Dinero: " + jugador.getDinero() + ", Posicion (0-39)"  + jugador.getPosicion() + "->" + ((Casilla)Casillas.get(jugador.getPosicion())).getNombre()+ "</p>";
             ArrayList posesiones = jugador.getPropiedades(); 
             htmlDepurar += "<p>Contiene las casillas:";
             for (int j = 0; j < posesiones.size(); j++) {
@@ -208,10 +210,51 @@ public class Servlet extends HttpServlet {
         for (int i = 0; i < Casillas.size(); i++) {
             htmlDepurar += "<p>";
             Casilla casilla = (Casilla)Casillas.get(i);
-            htmlDepurar += casilla.getNombre() + "(" + casilla.getId() +  "), " + casilla.getIdGrupo() + ", "  + casilla.getGrupo()+ "</p>";
+            htmlDepurar += casilla.getNombre() + "(id-" + casilla.getId() +  ",idG-" + casilla.getIdGrupo() + ",TotalG:"  + casilla.getGrupo()+ ")</p>";
+            htmlDepurar += "<p>";
+            htmlDepurar += "NumeroCasas:" + casilla.getNumeroDeCasas() +  ",NumeroHoteles:"  + casilla.getNumeroDeHoteles()+ "</p>";
+            htmlDepurar += "<br>";
         }
         return htmlDepurar;
     }
+    
+   private String guardar(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String nombre = request.getParameter("nombreGuardar"); 
+        this.control = (Control)session.getAttribute("control");
+        session.setAttribute("control", this.control);      
+        String rutaPartidas = this.control.getRutaPartidas();
+        try {
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(rutaPartidas + "\\" + nombre));
+            oos.writeObject(this.control);
+            oos.close();            
+        } 
+        catch (IOException ex) {
+        }
+        session.setAttribute("control", this.control);
+        return "Partida guardada en " + rutaPartidas + "\\" + nombre;
+    }
+    
+   
+    private String cargar(HttpServletRequest request) {
+        String rutaPartidas = System.getProperty("user.home") + "\\Desktop\\confMonopoly\\";
+        String nombre = request.getParameter("nombreCargar"); 
+        Object partida = null;       
+        try {
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(rutaPartidas + "\\" + nombre));        
+            partida = ois.readObject();
+            while (partida!=null) {
+                partida = ois.readObject();
+                ois.close();
+            }            
+        }
+        catch (Exception ex) {            
+        }
+        HttpSession session = request.getSession();
+        this.control = (Control)partida;
+        session.setAttribute("control", (Control)partida);
+        return "";        
+    }  
     
     private String respuesta(String contenido) {
         String html = "";
@@ -240,19 +283,60 @@ public class Servlet extends HttpServlet {
         html += "<html>";
         html += "<head>";
         html += "<script>";        
-        html += "window.parent.document.getElementById('idIniciar').style.display='none';";
-        html += "window.parent.document.getElementById('idCargar').style.display='none';";
-        html += "window.parent.document.getElementById('idGuardar').style.display='block';";
-        html += "window.parent.document.getElementById('idLanzar').style.display='block';";
-        if (this.control.getSePuedeComprar() != 0) {
-             html += "window.parent.document.getElementById('idComprar').disabled=false;";
+        if (this.control.getAcaboJuego() == 0) {
+            html += "window.parent.document.getElementById('idIniciar').style.display='none';";
+            html += "window.parent.document.getElementById('idCargar').style.display='none';";
+            html += "window.parent.document.getElementById('idGuardar').style.display='block';";
+            html += "window.parent.document.getElementById('idLanzar').style.display='block';";
+            if (this.control.getSePuedeComprar() != 0) {
+                 html += "window.parent.document.getElementById('idComprar').disabled=false;";
+            }
+            else {
+                html += "window.parent.document.getElementById('idComprar').disabled=true;";
+            }
+            if (this.control.getSePuedeEdificar()== 0) {
+                html += "window.parent.document.getElementById('edificarCasa1').disabled=true;";
+                html += "window.parent.document.getElementById('edificarCasa2').disabled=true;";
+                html += "window.parent.document.getElementById('edificarCasa3').disabled=true;";
+                html += "window.parent.document.getElementById('edificarCasa4').disabled=true;";
+                html += "window.parent.document.getElementById('edificarHotel').disabled=true;";            
+            }
+            else {
+                if (this.control.getNumeroAEdificar()== 4) {
+                    html += "window.parent.document.getElementById('edificarHotel').disabled=false;";            
+                }
+                if (this.control.getNumeroAEdificar()== 3) {                
+                    html += "window.parent.document.getElementById('edificarCasa1').disabled=false;";                                
+                }
+                if (this.control.getNumeroAEdificar()== 2) {                
+                    html += "window.parent.document.getElementById('edificarCasa1').disabled=false;";
+                    html += "window.parent.document.getElementById('edificarCasa2').disabled=false;";
+                }
+                if (this.control.getNumeroAEdificar()== 1) {                
+                    html += "window.parent.document.getElementById('edificarCasa1').disabled=false;";                                
+                    html += "window.parent.document.getElementById('edificarCasa2').disabled=false;";
+                    html += "window.parent.document.getElementById('edificarCasa3').disabled=false;";
+                }
+                if (this.control.getNumeroAEdificar()== 0) {                
+                    html += "window.parent.document.getElementById('edificarCasa1').disabled=false;";                                
+                    html += "window.parent.document.getElementById('edificarCasa2').disabled=false;";
+                    html += "window.parent.document.getElementById('edificarCasa3').disabled=false;";                
+                    html += "window.parent.document.getElementById('edificarCasa4').disabled=false;";                
+                }            
+            }
         }
         else {
+            html += "window.parent.document.getElementById('idIniciar').style.display='none';";
+            html += "window.parent.document.getElementById('idCargar').style.display='none';";
+            html += "window.parent.document.getElementById('idGuardar').style.display='none';";
+            html += "window.parent.document.getElementById('idLanzar').style.display='none';";
             html += "window.parent.document.getElementById('idComprar').disabled=true;";
+            html += "window.parent.document.getElementById('edificarCasa1').disabled=true;";
+            html += "window.parent.document.getElementById('edificarCasa2').disabled=true;";
+            html += "window.parent.document.getElementById('edificarCasa3').disabled=true;";
+            html += "window.parent.document.getElementById('edificarCasa4').disabled=true;";
+            html += "window.parent.document.getElementById('edificarHotel').disabled=true;";            
         }
-        if (this.control.getNumeroAEdificar() != 0) {
-            
-        }        
         html += "</script>";
         html += "<title>Servlet Servlet</title>"; 
         html += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">";
